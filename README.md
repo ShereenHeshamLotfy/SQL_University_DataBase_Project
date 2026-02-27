@@ -3,31 +3,30 @@
 ​-	We have a university database that is used to keep track of students' transcripts and it consists of:
 # 1.	Student table:
 a)	Student_ID which is Primary key  
-b)	Student_Name 
-c)	Sex 
-d)	Major_Department which is foreign key for Dept_Code in Department table
-e)	SSN and it is unique for each student
-f)	BirthDate 
-g)	Study_Year 
-h)	Current_Phone 
-i)	Current_Address 
-j)	Current_City 
-k)	Current_State 
-l)	Current_ZipCode 
-m)	Permanent_Phone 
-n)	Permanent_Address 
-o)	Permanent_City 
-p)	Permanent_State 
-q)	Permanent_ZipCode
+b)	Student_Name                                                                                                                                                                                                     
+c)	Sex                                                                                                                                                                                                              
+d)	Major_Department which is foreign key for Dept_Code in Department table                                                                                                                                          
+e)	SSN and it is unique for each student                                                                                                                                                                            f)	BirthDate                                                                                                                                                                                                        
+g)	Study_Year                                                                                                                                                                                                       
+h)	Current_Phone                                                                                                                                                                                                    
+i)	Current_Address                                                                                                                                                                                                  
+j)	Current_City                                                                                                                                                                                                     
+k)	Current_State                                                                                                                                                                                                    
+l)	Current_ZipCode                                                                                                                                                                                                  
+m)	Permanent_Phone                                                                                                                                                                                                  
+n)	Permanent_Address                                                                                                                                                                                                
+o)	Permanent_City                                                                                                                                                                                                   
+p)	Permanent_State                                                                                                                                                                                                  
+q)	Permanent_ZipCode                                                                                                                                                                                                
 
-# 3.	Department Table:
-a)	Dept_Code which is primary key
-b)	Dept_Name and it should be unique for every department and not null
-c)	Office_Number 
-d)	College 
-e)	Office_Phone 
--	There is a relationship between department and student one to many as every student study in one department and every department has many students.
-3.	Course Table:
+# 2.	Department Table:
+a)	Dept_Code which is primary key                                                                                                                                                                                   
+b)	Dept_Name and it should be unique for every department and not null                                                                                                                                              
+c)	Office_Number                                                                                                                                                                                                    
+d)	College                                                                                                                                                                                                          
+e)	Office_Phone                                                                                                                                                                                                     
+-	There is a relationship between department and student one to many as every student study in one department and every department has many students.                                                                 
+# 3.	Course Table:
 a)	Course_Number which is primary key,
 b)	Course_Name and should be not null
 c)	Description 
@@ -36,42 +35,43 @@ e)	Semester
 -	There is a relationship between Course table and Department table one to many as every course belongs to one department and every department has many courses.
 
 # 4.	Instructor Table:
-a)	Instructor_ID which is primary key
-b)	Instructor_Name 
-c)	Sex 
-d)	Dept_Code is a foreign key for Dept_Code  in department table
-e)	SSN should be unique for every instructor and not null
-f)	BirthDate 
-g)	Phone 
-h)	Salary 
--	There is a relationship between instructor and department one to many as every - department has many instructors and every instructor belongs to one department
+a)	Instructor_ID which is primary key                                                                                                                                                                               
+b)	Instructor_Name                                                                                                                                                                                                  
+c)	Sex                                                                                                                                                                                                              
+d)	Dept_Code is a foreign key for Dept_Code  in department table                                                                                                                                                    
+e)	SSN should be unique for every instructor and not null                                                                                                                                                           
+f)	BirthDate                                                                                                                                                                                                        
+g)	Phone                                                                                                                                                                                                            
+h)	Salary                                                                                                                                                                                                           
+-	There is a relationship between instructor and department one to many as every
+-	department has many instructors and every instructor belongs to one department
 -	As an instructor can teach one or many Courses and one course can have one or many instructor so relationship between Course table and Instructor Table so I made injection table between course and instructor called InstructorCourse
   
 # 5.	InstructorCourse Table:
-a)	Course_Number
-b)	Instructor_ID
+a)	Course_Number                                                                                                                                                                                                    
+b)	Instructor_ID                                                                                                                                                                                                    
 -	Both of them is a foreign key for Course table and instructor table and both of them is the primary key for the InstructorCourse table.
 -	Realtionship between InstructorCourse is one to many for both Instructor and Course tables.
   
 # 6.	Section Table:
-a)	Section_ID is primary key
-b)	Section_Number should be not null as there is no course has no section
-c)	Instructor_ID  is foreign key for Instructor _ID in instructor table
-d)	Course_Number is a foreign key for Course_Naumber in course table
-e)	Semester 
+a)	Section_ID is primary key                                                                                                                                                                                        
+b)	Section_Number should be not null as there is no course has no section                                                                                                                                           
+c)	Instructor_ID  is foreign key for Instructor _ID in instructor table                                                                                                                                             
+d)	Course_Number is a foreign key for Course_Naumber in course table                                                                                                                                                
+e)	Semester                                                                                                                                                                                                         
 -	There is a relationship one to many between section table and course table as every course can have many sections in semester and every section belongs to one course.
 -	There is a relationship one to many between Instructor table and Section table as every instructor can have one or many sections and every section can be taught by  one instructor.
 -	As Student can register in one or many courses and that means he can register in one or many section so relationship between Student and both Course and Section tables is many to many so i made injection tables which are RegistrationSection and RegistrationCourse
   
 # 7.	RegistrationSection Table:
-a)	Student_ID 
-b)	Section_ID
+a)	Student_ID                                                                                                                                                                                                       
+b)	Section_ID                                                                                                                                                                                                       
 -	Both of them is a foreign key for Student table and Section table and both of them is the primary key for the RegistrationSection table.
 -	Realtionship between RegistrationSection is one to many for both Student and Section tables.
   
 # 8.	RegistrationCourse Table:
-a)	Student_ID 
-b)	Course_Number
+a)	Student_ID                                                                                                                                                                                                       
+b)	Course_Number                                                                                                                                                                                                    
 -	Both of them is a foreign key for Student table and Course table and both of them is the primary key for the RegistrationCourse table.
 -	Realtionship between RegistrationCourse is one to many for both Student and Course tables.
 
