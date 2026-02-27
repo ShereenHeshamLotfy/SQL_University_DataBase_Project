@@ -2,7 +2,7 @@
 📝 Project Overview:
 ​-	We have a university database that is used to keep track of students' transcripts and it consists of:
 # 1.	Student table:
-a)	Student_ID which is Primary key
+a)	Student_ID which is Primary key  
 b)	Student_Name 
 c)	Sex 
 d)	Major_Department which is foreign key for Dept_Code in Department table
