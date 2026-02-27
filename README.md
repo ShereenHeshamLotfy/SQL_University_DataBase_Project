@@ -76,10 +76,10 @@ b)	Course_Number
 -	Realtionship between RegistrationCourse is one to many for both Student and Course tables.
 
 # ​🛠️ SQL Skills Applied:
-​Joins: To join between tables to answer important questions
-​Aggregations: (SUM,MAX,COUNT, AVG).
-​CTEs & Subqueries:to organize complex code and make it easier to read.
-Stored procedure :to encapsulate the 10 queries.
+​- Joins: To join between tables to answer important questions
+- ​Aggregations: (SUM,MAX,COUNT, AVG).
+- ​CTEs & Subqueries:to organize complex code and make it easier to read.
+- Stored procedure :to encapsulate the 10 queries.
 Implement indexing to optimize queries
 
 # Important questions and their results:
